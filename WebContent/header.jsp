@@ -10,7 +10,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>AEGISI</title>
+    <title>Senforage</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' charset="UTF-8"/>
     <link rel="icon" href="public/img/icon.ico" type="image/x-icon"/>
 
@@ -90,8 +90,8 @@
                                     <div class="user-box">
                                         <div class="avatar-lg"><img src="public/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
                                         <div class="u-text">
-                                            <h4>Hizrian</h4>
-                                            <p class="text-muted">hello@example.com</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+                                            <h4>Moussa</h4>
+                                            <p class="text-muted">amrane@gmail.com</p><a href="#profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
                                         </div>
                                     </div>
                                 </li>
@@ -119,7 +119,7 @@
                     <div class="info">
                         <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
-									Hizrian
+									Moussa
 									<span class="user-level">Administrator</span>
 									<span class="caret"></span>
 								</span>
@@ -131,16 +131,6 @@
                                 <li>
                                     <a href="#profile">
                                         <span class="link-collapse">My Profile</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#edit">
-                                        <span class="link-collapse">Edit Profile</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#settings">
-                                        <span class="link-collapse">Settings</span>
                                     </a>
                                 </li>
                             </ul>
@@ -185,7 +175,7 @@
                         <div class="collapse" id="client">
                             <ul class="nav nav-collapse">
                                 <li>
-                                    <a href="CLient">
+                                    <a href="Client">
                                         <span class="sub-item">Ajouter un client</span>
                                     </a>
                                 </li>
