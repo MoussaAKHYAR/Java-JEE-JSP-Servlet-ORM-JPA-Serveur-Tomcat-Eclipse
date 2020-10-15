@@ -18,19 +18,19 @@
                     <form action="Client" method="post">
                         <div class="form-group">
                             <label>Nom</label>
-                            <input class="form-control" type="text" name="nom">
-                        </div>
-                        <div class="form-group">
-                            <label>Prenom</label>
-                            <input class="form-control" type="text" name="prenom">
-                        </div>
-                        <div class="form-group">
-                            <label>Classe</label>
-                            <input  class="form-control"type="text" name="classe">
+                            <input class="form-control" type="text" name="nomDeFamille">
                         </div>
                         <div class="form-group">
                             <label>Télephone</label>
-                            <input class="form-control" type="text" name="numero">
+                            <input class="form-control" type="text" name="telephone">
+                        </div>
+                        <div class="form-group">
+                            <label>Village</label>
+                            <input  class="form-control"type="text" name="village">
+                        </div>
+                        <div class="form-group">
+                            <label>Adresse</label>
+                            <input class="form-control" type="text" name="adresse">
                         </div>
                         <div class="form-group">
                             <input class="btn btn-success" type="submit" value="Enregistrer"/>
