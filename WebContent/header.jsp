@@ -158,19 +158,35 @@
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>
 							</span>
-                        <h4 class="text-section">Pages</h4>
+                        <h4 class="text-section">Menu</h4>
                     </li>
                     <li class="nav-item">
-                        <a data-toggle="collapse" href="#forms">
+                        <a data-toggle="collapse" href="#village">
                             <i class="fas fa-pen-square"></i>
-                            <p>Membre</p>
+                            <p>Village</p>
                             <span class="caret"></span>
                         </a>
-                        <div class="collapse" id="forms">
+                        <div class="collapse" id="village">
                             <ul class="nav nav-collapse">
                                 <li>
-                                    <a href="Membre">
-                                        <span class="sub-item">Ajouter un nouveau membre</span>
+                                    <a href="Village">
+                                        <span class="sub-item">Ajouter un village</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a data-toggle="collapse" href="#client">
+                            <i class="fas fa-pen-square"></i>
+                            <p>Client</p>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="collapse" id="client">
+                            <ul class="nav nav-collapse">
+                                <li>
+                                    <a href="CLient">
+                                        <span class="sub-item">Ajouter un client</span>
                                     </a>
                                 </li>
                             </ul>

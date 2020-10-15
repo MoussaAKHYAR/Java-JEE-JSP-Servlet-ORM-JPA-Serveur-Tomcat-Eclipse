@@ -5,15 +5,10 @@
         <nav class="pull-left">
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        Help
-                    </a>
+                    
                 </li>
             </ul>
         </nav>
-        <div class="copyright ml-auto">
-            2018, made with <i class="fa fa-heart heart text-danger"></i> by <a href="https://www.themekita.com">ThemeKita</a>
-        </div>
     </div>
 </footer>
 </div>
@@ -46,7 +41,7 @@
 <script src="public/js/plugin/datatables/datatables.min.js"></script>
 
 <!-- Bootstrap Notify -->
-<script src="public/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+<!-- <script src="public/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>-->
 
 <!-- jQuery Vector Maps -->
 <script src="public/js/plugin/jqvmap/jquery.vmap.min.js"></script>
