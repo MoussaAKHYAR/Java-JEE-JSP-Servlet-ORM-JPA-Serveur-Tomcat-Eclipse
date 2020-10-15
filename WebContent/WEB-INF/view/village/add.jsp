@@ -15,23 +15,12 @@
                 <div class="card-title">Ajouter un village</div>
                 <div class="card-category">Formulaire</div>
                 <div>
-                    <form action="VIllage" method="post">
+                    <form action="Village" method="post">
                         <div class="form-group">
-                            <label>Nom</label>
-                            <input class="form-control" type="text" name="nom">
+                            <label>Nom du village</label>
+                            <input class="form-control" type="text" name="nomVillage">
                         </div>
-                        <div class="form-group">
-                            <label>Prenom</label>
-                            <input class="form-control" type="text" name="prenom">
-                        </div>
-                        <div class="form-group">
-                            <label>Classe</label>
-                            <input  class="form-control"type="text" name="classe">
-                        </div>
-                        <div class="form-group">
-                            <label>Télephone</label>
-                            <input class="form-control" type="text" name="numero">
-                        </div>
+                      
                         <div class="form-group">
                             <input class="btn btn-success" type="submit" value="Enregistrer"/>
                         </div>
