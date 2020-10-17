@@ -1,6 +1,8 @@
 package sn.senforage.controller;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -49,6 +51,8 @@ public class VillageServlet extends HttpServlet {
 		
 		villagedao.add(village);
 		
+		List<Village> villages = villagedao.villages();
+		request.setAttribute("villages", villages);
 		doGet(request, response);
 	}
 

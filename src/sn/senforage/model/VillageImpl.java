@@ -30,6 +30,6 @@ public class VillageImpl implements IVillage {
 
     @Override
     public List<Village> villages() {
-        return null;
+        return em.createQuery("SELECT v FROM Village v").getResultList();
     }
 }

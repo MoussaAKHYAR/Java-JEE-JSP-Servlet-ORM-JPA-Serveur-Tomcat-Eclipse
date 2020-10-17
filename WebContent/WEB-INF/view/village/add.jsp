@@ -1,19 +1,35 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <jsp:include page="../../../header.jsp"></jsp:include>
 <div class="row">
     <div class="col-md-8">
         <div class="card">
             <div class="card-header">
-                <div class="card-head-row">
+               
                     <div class="card-title">Liste des villages</div>
-                </div>
+                    	<div class="card-body">
+			                <table class="table table-head-bg-primary">
+			                    <thead>
+			                        <tr>
+			                            <th scope="col">#</th>
+			                            <th scope="col">Nom du village</th>
+			                            <th scope="col">Action</th>
+			                            <th scope="col">Action</th>
+			                        </tr>
+			                    </thead>
+			                    <tbody>
+			                    </tbody>
+			                </table>
+		                </div>
+		
+               </div>
             </div>
         </div>
-    </div>
     <div class="col-md-4">
         <div class="card card-secondary">
             <div class="card-header">
                 <div class="card-title">Ajouter un village</div>
-                <div class="card-category">Formulaire</div>
+            
                 <div>
                     <form action="Village" method="post">
                         <div class="form-group">
