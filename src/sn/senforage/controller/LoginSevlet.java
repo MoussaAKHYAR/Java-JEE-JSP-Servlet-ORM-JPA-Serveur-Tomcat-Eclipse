@@ -7,6 +7,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import sn.senforage.entities.Utilisateur;
+import sn.senforage.model.IUtilisateur;
+import sn.senforage.model.UtilisateurImpl;
 
 /**
  * Servlet implementation class LoginSevlet
@@ -14,20 +19,14 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "login", urlPatterns = { "/login" })
 public class LoginSevlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public LoginSevlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
+	
+	private IUtilisateur iUtilisateur;
 	/**
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
+		iUtilisateur = new UtilisateurImpl();
 	}
 
 	/**
@@ -43,7 +42,20 @@ public class LoginSevlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		String email = request.getParameter("email").toString();
+		String password = request.getParameter("password").toString();
+		
+		HttpSession session = request.getSession();
+		session.setAttribute("email", email);
+		
+		Utilisateur utilisateur = iUtilisateur.getLogin(email, password);
+		if (utilisateur != null) {
+			response.sendRedirect("index");
+		}
+		else {
+			response.sendRedirect("login");
+		}
+		//doGet(request, response);
 	}
 
 }
