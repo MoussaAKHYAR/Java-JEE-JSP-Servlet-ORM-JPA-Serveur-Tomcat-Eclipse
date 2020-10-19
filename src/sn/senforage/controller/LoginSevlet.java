@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import sn.senforage.entities.Utilisateur;
-import sn.senforage.model.IUtilisateur;
-import sn.senforage.model.UtilisateurImpl;
+import sn.senforage.entities.User;
+import sn.senforage.model.IUser;
+import sn.senforage.model.UserImpl;
 
 /**
  * Servlet implementation class LoginSevlet
@@ -20,13 +20,13 @@ import sn.senforage.model.UtilisateurImpl;
 public class LoginSevlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private IUtilisateur iUtilisateur;
+	private IUser iuser;
 	/**
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
-		iUtilisateur = new UtilisateurImpl();
+		iuser = new UserImpl();
 	}
 
 	/**
@@ -49,9 +49,9 @@ public class LoginSevlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("email", email);
 		
-		Utilisateur utilisateur = iUtilisateur.getLogin(email,password);
-		if (utilisateur != null) {
-			response.sendRedirect("index");
+		User user = iuser.getLogin(email,password);
+		if (user != null) {
+			response.sendRedirect("index.jsp");
 		}
 		else {
 			response.sendRedirect("login");

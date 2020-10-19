@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
 @Entity
-public class Utilisateur {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -22,10 +22,10 @@ public class Utilisateur {
     @ManyToMany
     private List<Roles> roles = new ArrayList<Roles>();
 
-    public Utilisateur() {
+    public User() {
     }
 
-    public Utilisateur(int id, String nom, String prenom, String email, String password) {
+    public User(int id, String nom, String prenom, String email, String password) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
