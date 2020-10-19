@@ -28,7 +28,7 @@ public class UtilisateurImpl implements IUtilisateur {
 		// TODO Auto-generated method stub
 		 try {
 	            return (Utilisateur)em
-	                    .createQuery("select u from Utilisateur u where u.email=:e and u.password=:p")
+	                    .createQuery("select u from UTILISATEUR u where u.email=:e and u.password=:p")
 	                    .setParameter("e",email)
 	                    .setParameter("p",password)
 	                    .getSingleResult();

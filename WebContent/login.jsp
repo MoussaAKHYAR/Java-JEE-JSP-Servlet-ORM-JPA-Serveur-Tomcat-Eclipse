@@ -90,15 +90,15 @@
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
         <div class="col-md-4 col-md-4 col-sm-4 col-xs-12">
             <div class="text-center m-b-md custom-login">
-                <h3>CONNECTEZ VOUS A L'APPLICATION</h3>
+                <h3>CONNECTEZ VOUS A L'APPLICATION SENFORAGE</h3>
                 
             </div>
             <div class="hpanel">
                 <div class="panel-body">
-                    <form action="Login" id="loginForm" method="post">
+                    <form action="login" id="loginForm" method="post">
                         <div class="form-group">
-                            <label class="control-label" for="username">Username</label>
-                            <input type="text" placeholder="example@gmail.com" title="Please enter you username" required="" name="email" id="username" class="form-control">
+                            <label class="control-label" for="email">Nom d'utilisateur</label>
+                            <input type="text" placeholder="example@gmail.com" title="Please enter you username" required="" name="email" id="email" class="form-control">
                             <span class="help-block small">Your unique username to app</span>
                         </div>
                         <div class="form-group">

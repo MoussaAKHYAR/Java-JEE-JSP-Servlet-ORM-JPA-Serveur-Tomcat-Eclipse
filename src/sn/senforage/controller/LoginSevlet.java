@@ -34,7 +34,8 @@ public class LoginSevlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.getRequestDispatcher("login.jsp").forward(request, response);
 	}
 
 	/**
@@ -48,7 +49,7 @@ public class LoginSevlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("email", email);
 		
-		Utilisateur utilisateur = iUtilisateur.getLogin(email, password);
+		Utilisateur utilisateur = iUtilisateur.getLogin(email,password);
 		if (utilisateur != null) {
 			response.sendRedirect("index");
 		}
