@@ -36,6 +36,9 @@ public class VillageServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+
+		List<Village> villages = villagedao.villages();
+		request.setAttribute("villages", villages);
 		request.getRequestDispatcher("/WEB-INF/view/village/add.jsp").forward(request, response);
 	}
 
@@ -45,16 +48,23 @@ public class VillageServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String nomVillage = request.getParameter("nomVillage").toString();
-
-		Village village = new Village();
-		village.setNomVillage(nomVillage);
+		
+		if (!(nomVillage.isEmpty())) {
+			Village village = new Village();
+			village.setNomVillage(nomVillage);
+				
+			villagedao.add(village);	
+			doGet(request, response);
+			
+		}else {
+			List<Village> villages = villagedao.villages();
+			request.setAttribute("villages", villages);
+			request.getRequestDispatcher("/WEB-INF/view/village/add.jsp").forward(request, response);
+			
+		}
 		
 		
-		villagedao.add(village);
 		
-		List<Village> villages = villagedao.villages();
-		request.setAttribute("villages", villages);
-		doGet(request, response);
 	}
 
 }

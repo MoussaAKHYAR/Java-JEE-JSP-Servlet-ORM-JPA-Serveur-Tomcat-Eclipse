@@ -25,7 +25,7 @@
 
 									<td>
 										<button class="btn btn-default btn-sm">
-											<i class="fa fa-trash"></i> Supprimer
+											<i class="fa fa-trash" ></i> Supprimer
 										</button>
 									</td>
 									<td>
