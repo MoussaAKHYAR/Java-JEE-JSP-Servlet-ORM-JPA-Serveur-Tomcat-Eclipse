@@ -13,7 +13,6 @@ public class VillageImpl implements IVillage {
 
 	public VillageImpl() {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("senforagePU");
-
 		em = emf.createEntityManager();
 	}
 	@Override
@@ -48,6 +47,20 @@ public class VillageImpl implements IVillage {
 		}catch (Exception e)
 		{
 			return null;
+		}
+	}
+	@Override
+	public int delete(int id, Village village) {
+		try {
+			em.getTransaction().begin();
+			village = em.find(Village.class,id);
+			em.remove(village);
+			em.getTransaction().commit();
+			return 1;
+		}catch (Exception ex)
+		{
+			ex.printStackTrace();
+			return 0;
 		}
 	}
 }

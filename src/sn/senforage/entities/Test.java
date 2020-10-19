@@ -1,9 +1,7 @@
 package sn.senforage.entities;
 
 import sn.senforage.model.IUser;
-import sn.senforage.model.IVillage;
 import sn.senforage.model.UserImpl;
-import sn.senforage.model.VillageImpl;
 
 public class Test {
 
@@ -16,7 +14,7 @@ public class Test {
 		u.setNom("AKHYAR");
 		u.setPrenom("Moussa");
 		u.setPassword("passer");
-		int ok = iUtilisateur.add(u);
+		iUtilisateur.add(u);
 	}
 
 }

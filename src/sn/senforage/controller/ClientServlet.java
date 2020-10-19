@@ -64,9 +64,11 @@ public class ClientServlet extends HttpServlet {
 	       
 	    client.setNomDeFamille(nomDeFamille);;
 	    client.setTelephone(telephone);
+	    client.setAdresse(adresse);
 	    client.setVillage(village);
 	    client.setUser(userdao.get(userId));
 	    clientdao.add(client);
+	    
 		doGet(request, response);
 	}
 

@@ -25,8 +25,14 @@
                             <input class="form-control" type="text" name="telephone">
                         </div>
                         <div class="form-group">
-                            <label>Village</label>
-                            <input  class="form-control"type="text" name="village">
+                            <label>Village</label> 
+                            <select name="village" class="form-control">
+								<option value="opt1">Village</option>
+								<c:forEach items="${users}" var="user">
+									<option value="${user.id}">${user.email}</option>
+									<br>
+								</c:forEach>
+							</select> 
                         </div>
                         <div class="form-group">
                             <label>Adresse</label>

@@ -53,6 +53,7 @@ public class LoginSevlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("email", email);
 			session.setAttribute("prenom", user.getPrenom());
+			session.setAttribute("id", user.getId());
 			response.sendRedirect("index.jsp");
 		}
 		else {

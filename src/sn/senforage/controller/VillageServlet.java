@@ -40,6 +40,12 @@ public class VillageServlet extends HttpServlet {
 		List<Village> villages = villagedao.villages();
 		request.setAttribute("villages", villages);
 		request.getRequestDispatcher("/WEB-INF/view/village/add.jsp").forward(request, response);
+		String path = request.getServletPath();
+		if (path.equals("/supprimer")) {
+			villagedao.delete(id);
+			request.getRequestDispatcher("/WEB-INF/view/village/add.jsp").forward(request, response);
+
+		}
 	}
 
 	/**
