@@ -49,6 +49,7 @@ public class VillageServlet extends HttpServlet {
 		Village village = new Village();
 		village.setNomVillage(nomVillage);
 		
+		
 		villagedao.add(village);
 		
 		List<Village> villages = villagedao.villages();

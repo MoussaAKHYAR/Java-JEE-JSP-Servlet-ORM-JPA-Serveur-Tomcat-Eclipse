@@ -11,7 +11,18 @@ public class Client {
     private String telephone;
     @ManyToOne
     private Village village = new Village();
-    private String adresse;
+    @ManyToOne
+    private User user = new User();
+    
+    public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	private String adresse;
 
     public Client() {
     }

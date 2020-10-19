@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 @Entity
 public class User {
@@ -18,7 +19,8 @@ public class User {
     private String prenom;
     private String email;
     private String password;
-    
+    @OneToMany(mappedBy = "user")
+    private List<Client> clients = new ArrayList<Client>();
     @ManyToMany
     private List<Roles> roles = new ArrayList<Roles>();
 

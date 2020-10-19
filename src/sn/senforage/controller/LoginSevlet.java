@@ -34,8 +34,10 @@ public class LoginSevlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		request.getRequestDispatcher("login.jsp").forward(request, response);
+		HttpSession session = request.getSession();
+		
+		session.invalidate();
+		response.sendRedirect("login.jsp");
 	}
 
 	/**
@@ -45,12 +47,12 @@ public class LoginSevlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String email = request.getParameter("email").toString();
 		String password = request.getParameter("password").toString();
-		
-		HttpSession session = request.getSession();
-		session.setAttribute("email", email);
-		
+				
 		User user = iuser.getLogin(email,password);
 		if (user != null) {
+			HttpSession session = request.getSession();
+			session.setAttribute("email", email);
+			session.setAttribute("prenom", user.getPrenom());
 			response.sendRedirect("index.jsp");
 		}
 		else {

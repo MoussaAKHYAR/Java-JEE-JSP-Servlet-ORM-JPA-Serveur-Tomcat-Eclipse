@@ -90,14 +90,14 @@
                                     <div class="user-box">
                                         <div class="avatar-lg"><img src="public/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
                                         <div class="u-text">
-                                            <h4>Moussa</h4>
-                                            <p class="text-muted">amrane@gmail.com</p><a href="#profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+                                            <h4>Utilisateur</h4>
+                                            <p class="text-muted">${sessionScope.email}</p><a href="#profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Logout</a>
+                                    <a class="dropdown-item" href="login">Logout</a>
                                 </li>
                             </div>
                         </ul>
@@ -119,7 +119,7 @@
                     <div class="info">
                         <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
-									Moussa
+									${sessionScope.email}
 									<span class="user-level">Administrator</span>
 									<span class="caret"></span>
 								</span>
@@ -192,5 +192,5 @@
         <div class="content">
             <div class="page-inner">
                 <div class="mt-2 mb-4">
-                    <h2 class="text-white pb-2">Bienvenue !</h2>
+                    <h2 class="text-white pb-2">Bienvenue ${sessionScope.prenom}</h2>
                 </div>
