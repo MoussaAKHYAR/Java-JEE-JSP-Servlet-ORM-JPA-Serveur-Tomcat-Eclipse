@@ -9,4 +9,5 @@ public interface IUser {
     public List<User> users();
     public User getLogin(String email, String password);
     public int delete(int id, User utilisateur);
+    public User get(int id);
 }

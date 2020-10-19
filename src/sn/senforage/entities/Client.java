@@ -27,15 +27,17 @@ public class Client {
     public Client() {
     }
 
-    public Client(int id, String nomDeFamille, String telephone, Village village, String adresse) {
-        this.id = id;
-        this.nomDeFamille = nomDeFamille;
-        this.telephone = telephone;
-        this.village = village;
-        this.adresse = adresse;
-    }
+    public Client(int id, String nomDeFamille, String telephone, Village village, User user, String adresse) {
+		super();
+		this.id = id;
+		this.nomDeFamille = nomDeFamille;
+		this.telephone = telephone;
+		this.village = village;
+		this.user = user;
+		this.adresse = adresse;
+	}
 
-    public int getId() {
+	public int getId() {
         return id;
     }
 
