@@ -23,10 +23,9 @@
 									<td>${village.id}</td>
 									<td>${village.nomVillage}</td>
 
-									<td>
-										<button class="btn btn-default btn-sm">
-											<i class="fa fa-trash" ></i> Supprimer
-										</button>
+									<td><a
+										href="{{ path('deleteVehicule', {id: vehicule.id}) }}"
+										class="btn btn-danger">Supprimer</a>
 									</td>
 									<td>
 										<button class="btn btn-default btn-sm">

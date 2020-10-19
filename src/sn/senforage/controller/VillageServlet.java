@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import sn.senforage.entities.Village;
 import sn.senforage.model.IVillage;
@@ -42,7 +43,10 @@ public class VillageServlet extends HttpServlet {
 		request.getRequestDispatcher("/WEB-INF/view/village/add.jsp").forward(request, response);
 		String path = request.getServletPath();
 		if (path.equals("/supprimer")) {
-			villagedao.delete(id);
+			Village village = null;
+			HttpSession session = request.getSession();
+			int id = (int) session.getAttribute("id");
+			villagedao.delete(id,village);
 			request.getRequestDispatcher("/WEB-INF/view/village/add.jsp").forward(request, response);
 
 		}
