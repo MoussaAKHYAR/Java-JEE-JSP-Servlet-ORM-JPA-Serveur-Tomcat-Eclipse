@@ -1,6 +1,5 @@
 package sn.senforage.model;
 
-import sn.senforage.entities.User;
 import sn.senforage.entities.Village;
 
 import javax.persistence.EntityManager;
@@ -62,5 +61,10 @@ public class VillageImpl implements IVillage {
 			ex.printStackTrace();
 			return 0;
 		}
+	}
+	@Override
+	public Village get(int id) {
+		// TODO Auto-generated method stub
+		return em.find(Village.class,id);
 	}
 }

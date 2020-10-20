@@ -9,4 +9,5 @@ public interface IVillage {
     public List<Village> villages();
     public int delete(int id, Village village);
     public Village getVillageByName(String nomVillage);
+    public Village get(int id);
 }

@@ -45,6 +45,9 @@ public class ClientServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		request.setAttribute("villages", villagedao.villages());
+		request.setAttribute("clients", clientdao.clients());
+		request.setAttribute("users", userdao.users());
 		request.getRequestDispatcher("/WEB-INF/view/client/add.jsp").forward(request, response);
 	}
 
@@ -53,11 +56,13 @@ public class ClientServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String nomDeFamille = request.getParameter("nomDefamille");
+		String nomDeFamille = request.getParameter("nomDeFamille");
 		String telephone = request.getParameter("telephone");
 		String adresse = request.getParameter("adresse");
-		String nomVillage = request.getParameter("village");
-		Village village = villagedao.getVillageByName(nomVillage);
+		
+		//String nomVillage = request.getParameter("village");
+		//Village village = villagedao.getVillageByName(nomVillage);
+		
 		HttpSession session = request.getSession();
 	    int userId = (int) session.getAttribute("id");
 	    Client client=new Client();
@@ -65,7 +70,7 @@ public class ClientServlet extends HttpServlet {
 	    client.setNomDeFamille(nomDeFamille);;
 	    client.setTelephone(telephone);
 	    client.setAdresse(adresse);
-	    client.setVillage(village);
+	    client.setVillage(villagedao.get(Integer.parseInt(request.getParameter("village"))));
 	    client.setUser(userdao.get(userId));
 	    clientdao.add(client);
 	    
