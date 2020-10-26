@@ -9,14 +9,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import sn.senforage.dao.ClientImpl;
+import sn.senforage.dao.IClient;
+import sn.senforage.dao.IUser;
+import sn.senforage.dao.IVillage;
+import sn.senforage.dao.UserImpl;
+import sn.senforage.dao.VillageImpl;
 import sn.senforage.entities.Client;
-import sn.senforage.entities.Village;
-import sn.senforage.model.ClientImpl;
-import sn.senforage.model.IClient;
-import sn.senforage.model.IUser;
-import sn.senforage.model.IVillage;
-import sn.senforage.model.UserImpl;
-import sn.senforage.model.VillageImpl;
+
 
 /**
  * Servlet implementation class ClientServlet

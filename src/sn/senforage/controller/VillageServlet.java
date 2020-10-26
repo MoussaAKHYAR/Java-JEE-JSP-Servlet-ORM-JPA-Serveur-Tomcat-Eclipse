@@ -11,9 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import sn.senforage.dao.IVillage;
+import sn.senforage.dao.VillageImpl;
 import sn.senforage.entities.Village;
-import sn.senforage.model.IVillage;
-import sn.senforage.model.VillageImpl;
+
+
 
 /**
  * Servlet implementation class VillageServlet

@@ -9,9 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import sn.senforage.dao.IUser;
+import sn.senforage.dao.UserImpl;
 import sn.senforage.entities.User;
-import sn.senforage.model.IUser;
-import sn.senforage.model.UserImpl;
+
+
 
 /**
  * Servlet implementation class LoginSevlet
